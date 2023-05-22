@@ -55,20 +55,12 @@ header .burger .line {
 
 /* Main */
 main {
-  padding: 1rem;
-}
-
-main .content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1rem;
 }
 
 /* user input */
 
 main .content .tabs {
   background: #f4f4f4;
-  padding: 1rem;
   border-radius: 5px;
   display: flex;
   flex-direction: row;
@@ -85,12 +77,16 @@ main .content .tabs .tab {
   align-items: center;
   justify-content: center;
   height: 54px;
-  width: 200px;
+  width: 50%;
   font-size: 1.25rem;
   font-weight: 400;
-  border-radius: 99px;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
+}
+
+main .content .tabs .tab:nth-child(1) {
+  background: #333;
+  color: #fff;
 }
 
 input[type="radio"]:checked + .tab {
@@ -115,7 +111,7 @@ input[id="artist"]:checked ~ .glider {
 }
 
 input[id="studio"]:checked ~ .glider {
-  transform: translateX(75%);
+  transform: translateX(100%);
 }
 
 .glider {
@@ -125,8 +121,7 @@ input[id="studio"]:checked ~ .glider {
   width: 50%;
   background-color: black;
   z-index: 1;
-  border-radius: 99px;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.25s ease-in-out;
 }
 
 /* main output */
