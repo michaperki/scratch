@@ -1,0 +1,78 @@
+/* Mobile-first responsive design principles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 1rem;
+    text-align: center;   
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header a {
+    color: #fff;
+}
+
+header nav {
+    display: none;
+}
+
+/* Main */
+main {
+    padding: 1rem;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked +
+label {
+    border-bottom: 3px solid black;
+
+}
+
+label {
+    padding: 1rem;
+    background: #eee;
+    text-align: center;
+    cursor: pointer;
+}
+
+#studio-form {
+    display: none;
+}

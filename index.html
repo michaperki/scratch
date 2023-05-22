@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="img/logo.png" alt="logo" />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="content">
+        <div class="user-input">
+          <input type="radio" name="user" id="artist" checked />
+          <label for="artist">artists</label>
+          <input type="radio" name="user" id="studio" />
+          <label for="studio">studios</label>
+        </div>
+        <div class="output">
+          <!-- the output will change based on the radio button selected -->
+          <div id="artist-form">
+            <h1>For Artists</h1>
+            <p>Lorem ipsum dolor sit amet consecte tur adipisicing elit.</p>
+
+            <button>Learn More</button>
+
+            <div class="img-container">
+              <img src="assets/img/splash_artist.png" alt="artist" class="splash"/>
+            </div>
+          </div>
+
+          <div id="studio-form">
+            <h1>For Studios</h1>
+            <p>Lorem ipsum dolor sit amet consecte tur adipisicing elit.</p>
+
+            <button>Learn More</button>
+
+            <div class="img-container">
+              <img src="assets/img/splash_studio.png" alt="studio" class="splash"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
