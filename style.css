@@ -1,78 +1,174 @@
 /* Mobile-first responsive design principles */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
 }
 
 a {
-    text-decoration: none;
-    color: #333;
+  text-decoration: none;
+  color: #333;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 /* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #333;
-    padding: 1rem;
-    text-align: center;   
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 1rem;
+  text-align: center;
 }
 
 header h1 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 header a {
-    color: #fff;
+  color: #fff;
 }
 
-header nav {
-    display: none;
+header .nav-links {
+  display: none;
+}
+
+header .burger .line {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Main */
 main {
-    padding: 1rem;
+  padding: 1rem;
 }
 
-.content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 1rem;
+main .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
 }
 
-input[type="radio"] {
-    display: none;
+/* user input */
+
+main .content .tabs {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-input[type="radio"]:checked +
-label {
-    border-bottom: 3px solid black;
-
+main .content .tabs input[type="radio"] {
+  margin-right: 0.5rem;
+  appearance: none;
 }
 
-label {
-    padding: 1rem;
-    background: #eee;
-    text-align: center;
-    cursor: pointer;
+main .content .tabs .tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  width: 200px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
 }
 
-#studio-form {
-    display: none;
+input[type="radio"]:checked + .tab {
+  color: #fff;
+}
+
+input[type="radio"]:checked + label {
+  color: #fff;
+  z-index: 2;
+}
+
+input[id="artist"]:checked ~ .output div#artist-form {
+  transform: translateX(0);
+}
+
+input[id="studio"]:checked ~ .output div#studio-form {
+  transform: translateX(0);
+}
+
+input[id="artist"]:checked ~ .glider {
+  transform: translateX(0);
+}
+
+input[id="studio"]:checked ~ .glider {
+  transform: translateX(75%);
+}
+
+.glider {
+  position: absolute;
+  display: flex;
+  height: 54px;
+  width: 50%;
+  background-color: black;
+  z-index: 1;
+  border-radius: 99px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* main output */
+
+div.output {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+div.output div#artist-form {
+  display: block;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.output div#studio-form {
+  display: none;
+}
+
+div.output h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+div.output p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+div.output button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.output div.img-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }

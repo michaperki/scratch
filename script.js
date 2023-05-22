@@ -1,7 +1,7 @@
-var userSelection = document.getElementsByName('user');
+var tabs = document.getElementsByName('tabs');
 
-for (var i = 0; i < userSelection.length; i++) {
-    userSelection[i].addEventListener('change', function() {
+for (var i = 0; i < tabs.length; i++) {
+    tabs[i].addEventListener('change', function() {
         updateUI(this.id)
     });
 }
@@ -21,4 +21,3 @@ function updateUI(id) {
     }
 
 }
-
