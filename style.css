@@ -67,6 +67,10 @@ main .content .tabs {
   justify-content: space-between;
 }
 
+main .content .tabs label {
+    transform: translateX(-15px);
+}
+
 main .content .tabs input[type="radio"] {
   margin-right: 0.5rem;
   appearance: none;
@@ -96,6 +100,10 @@ input[type="radio"]:checked + .tab {
 input[type="radio"]:checked + label {
   color: #fff;
   z-index: 2;
+}
+
+.tabs i {
+  transform: translateX(15px);
 }
 
 input[id="artist"]:checked ~ .output div#artist-form {
