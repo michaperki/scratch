@@ -246,6 +246,16 @@ div.output div.img-container form {
   height: 100%;
 }
 
+div.output div.img-container form label {
+  background-color: black;
+  opacity: 0.8;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
 div.output div.img-container form input[type="email"] {
   width: 80%;
   padding: 0.5rem;
@@ -281,12 +291,10 @@ section.how-it-works h1 {
 }
 
 section.how-it-works h2 {
-    font-size: 1.25rem;
-    font-weight: 400;
-    margin-bottom: 0.5rem;  
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
 }
-
-
 
 section.how-it-works p {
   font-size: 0.75rem;
@@ -311,4 +319,17 @@ footer {
 footer div.footer-content div.footer-section .logo-text {
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+footer div.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer div.contact span {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
 }

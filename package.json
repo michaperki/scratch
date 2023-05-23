@@ -1,0 +1,14 @@
+{
+  "name": "artful",
+  "version": "1.0.0",
+  "description": "updating readme from VS code",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
