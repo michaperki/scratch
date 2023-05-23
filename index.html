@@ -18,14 +18,17 @@
       </div>
       <nav>
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
           <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
+          <li><a href="#">For Investors</a></li>
         </ul>
-
         <div
           class="burger"
-          onclick="document.querySelector('.burger').classList.toggle('active');"
+          onclick="
+            document.querySelector('.burger').classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
+            document.querySelector('header').classList.toggle('active');
+            
+            "
         >
           <div class="line" id="line1"></div>
           <div class="line" id="line2"></div>
@@ -54,12 +57,11 @@
 
             <button>Learn More</button>
 
-            <div class="img-container">
-              <img
-                src="assets/img/splash_artist.png"
-                alt="artist"
-                class="splash"
-              />
+            <div class="img-container" id="artist-img">
+              <form action="subscribe">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="submit" value="Subscribe" class="btn">
+              </form>
             </div>
             <section class="how-it-works">
               <h1>How It Works</h1>
@@ -67,17 +69,17 @@
                 <div class="step">
                   <i class="fas fa-user"></i>
                   <h2>Step 1</h2>
-                  <p>Create a free artist profile</p>
+                  <p>Create a free profile</p>
                 </div>
                 <div class="step">
                   <i class="fas fa-laptop"></i>
                   <h2>Step 2</h2>
-                  <p>Browse available studio time</p>
+                  <p>Browse studio time</p>
                 </div>
                 <div class="step">
                   <i class="fas fa-car"></i>
                   <h2>Step 3</h2>
-                  <p>Get approved and get to work</p>
+                  <p>Get to work</p>
                 </div>
               </div>
             </section>
@@ -89,30 +91,29 @@
 
             <button>Learn More</button>
 
-            <div class="img-container">
-              <img
-                src="assets/img/splash_studio.png"
-                alt="studio"
-                class="splash"
-              />
-            </div>
+            <div class="img-container" id="studio-img">
+                <form action="subscribe">
+                  <input type="email" name="email" id="email" placeholder="Email">
+                  <input type="submit" value="Subscribe" class="btn">
+                </form>
+              </div>
             <section class="how-it-works">
-              <h1>How it works</h1>
+              <h1>How It Works</h1>
               <div class="steps">
                 <div class="step">
                   <i class="fas fa-user"></i>
                   <h2>Step 1</h2>
-                  <p>Create a free studio profile</p>
+                  <p>Create a free profile</p>
                 </div>
                 <div class="step">
                   <i class="fas fa-laptop"></i>
                   <h2>Step 2</h2>
-                  <p>List available wheel time</p>
+                  <p>List wheel time</p>
                 </div>
                 <div class="step">
-                  <i class="fas fa-car"></i>
+                  <i class="fas fa-check"></i>
                   <h2>Step 3</h2>
-                  <p>Approve requests on your time</p>
+                  <p>Approve requests</p>
                 </div>
               </div>
             </section>
@@ -120,7 +121,24 @@
         </div>
       </div>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h1 class="logo-text">
+            <span>artful</span>
+          </h1>
+          <p>Artful is a platform that connects artists with studio space.</p>
+          <div class="contact">
+            <span><i class="fas fa-phone"></i> &nbsp; 214-701-2414</span>
+            <span><i class="fas fa-envelope"></i> &nbsp;</span>>
+          </div>
+          <div class="socials">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
