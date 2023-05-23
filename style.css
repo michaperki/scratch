@@ -33,9 +33,9 @@ header {
 }
 
 header .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
 }
 
 header .logo img {
@@ -65,8 +65,6 @@ header .burger .line {
 }
 
 /* Main */
-main {
-}
 
 /* user input */
 
@@ -79,7 +77,7 @@ main .content .tabs {
 }
 
 main .content .tabs label {
-    transform: translateX(-15px);
+  transform: translateX(-15px);
 }
 
 main .content .tabs input[type="radio"] {
@@ -147,8 +145,12 @@ input[id="studio"]:checked ~ .glider {
 
 div.output {
   background: #f4f4f4;
-  padding: 1rem;
   border-radius: 5px;
+}
+
+div.output .output-form  {
+    /* center */
+    text-align: center;
 }
 
 div.output div#artist-form {
@@ -184,5 +186,32 @@ div.output button {
 div.output div.img-container img {
   width: 100%;
   height: auto;
-  border-radius: 5px;
 }
+
+/* how-it-works section */
+
+section {
+    transform: translateY(-10px);
+}
+
+section.how-it-works {
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+
+section.how-it-works h1 {
+  font-size: 1.5rem;
+}
+
+section.how-it-works p {
+  font-size: 1rem;
+}
+
+section.how-it-works .steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
