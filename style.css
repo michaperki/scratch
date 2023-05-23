@@ -56,13 +56,39 @@ header .nav-links {
   display: none;
 }
 
-header .burger .line {
+header .burger {
+  display: block;
+  cursor: pointer;
+}
+
+header .burger #line1,
+header .burger #line2,
+header .burger #line3 {
   width: 25px;
   height: 3px;
   background: #fff;
   margin: 5px;
   transition: all 0.3s ease-in-out;
 }
+
+
+header .burger.active #line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+header .burger.active #line2 {
+    opacity: 0;
+}
+
+header .burger.active #line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
+
+
+
 
 /* Main */
 
